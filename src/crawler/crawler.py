@@ -79,6 +79,7 @@ class Crawler:
             {"href": pattern, "onclick": "return false"},
         )
 
+
         last_page_url = next_pages[-2].get("href")
         match = re.search(r"\?p=(\d+)", last_page_url)
         last_page = int(match.group(1))

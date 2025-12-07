@@ -52,6 +52,9 @@ def main() -> None:
     clear_terminal()
     live_manager = initialize_managers()
     url = sys.argv[1]
+    if not url.endswith("/"):
+        url += "/"
+
     download_album(url, live_manager)
 
 if __name__ == "__main__":
